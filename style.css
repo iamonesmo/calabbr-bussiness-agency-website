@@ -324,7 +324,11 @@ html{
     top: 5rem;
     right: 15rem;
     box-shadow: 3rem 3rem 3rem rgba(0, 0, 0, .7);
+    overflow: hidden;
 
+}
+.video-wrapper:hover .controls{
+    transform: translateY(0);
 }
 
 .video{
@@ -332,12 +336,15 @@ html{
     height: 100%;
     object-fit: cover;
     opacity: .3;
+    transition: opacity .3s;
 }
 .controls{
     width: 100%;
     position: absolute;
     bottom: 0;
     background-color: rgba(0, 0, 0, .7);
+    transform: translateY(calc(100% - 0.4rem));
+    transition: transform .4s;
 }
 
 .video-bar-wrapper{
@@ -351,8 +358,9 @@ html{
 
 .video-bar{
     height: 100%;
-    width: 20%;
+    width: 0;
     background-color: #d30819;
+    transition: width .2s linear;
 }
 
 .buttons{
